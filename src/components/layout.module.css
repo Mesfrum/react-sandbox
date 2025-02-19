@@ -1,0 +1,30 @@
+.root {
+  padding: 10px;
+  border: gainsboro 1px solid;
+  height: 100%;
+}
+
+.root > table {
+  padding: 10px;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.root > table > thead {
+  background-color: gainsboro;
+}
+
+.root tbody {
+  border: gainsboro 1px solid;
+}
+
+.root th {
+  padding: 10px 16px;
+  text-align: center;
+}
+
+.root td {
+  text-align: center;
+  padding: 6px 10px;
+  border-bottom: 1px solid gainsboro;
+}
