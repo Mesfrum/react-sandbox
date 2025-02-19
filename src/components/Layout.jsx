@@ -16,20 +16,26 @@ export default function Layout() {
   if (tableData?.length < 1) {
     return <div>No data Found!</div>;
   }
+
   return (
     <div className={styles.root}>
       <table>
         <thead>
           <tr>
+            <th>Sr. No</th>
             {Object.keys(tableData[0]).map((col) => (
-              <th key={col}>{col}</th>
+              <th key={col}>
+                {col}
+                <span className={`${styles.sortCaret}`}>^</span>
+              </th>
             ))}
           </tr>
         </thead>
         <tbody>
-          {tableData?.map((row) => {
+          {tableData?.map((row, index) => {
             return (
               <tr key={row?.id}>
+                <td>{index + 1}</td>
                 {Object.values(row).map((val) => {
                   return <td key={`${val}`}>{val}</td>;
                 })}
